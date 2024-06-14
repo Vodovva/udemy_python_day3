@@ -100,7 +100,7 @@
 #     print('Sorry you have to grow taller before you can ride.')
 
 
-# Lesson 2
+# Lesson 2 actually
     
 # Write a program that interprets the Body Mass Index (BMI) based on a user's weight and height.
 # It should tell them the interpretation of their BMI based on the BMI value.
