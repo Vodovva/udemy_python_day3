@@ -207,6 +207,8 @@
 #     print('Sorry you have to grow taller before you can ride.')
 
 
+
+
 # Lesson 4
 # Congratulations, you've got a job at Python Pizza! Your first job is to build an automatic pizza order program.
 # Based on a user's order, work out their final bill.
@@ -218,32 +220,135 @@
 # Add extra cheese for any size pizza (Y or N): +$1
 
 
-print("Thank you for choosing Python Pizza Deliveries!")
-size = input() # What size pizza do you want? S, M, or L
-add_pepperoni = input() # Do you want pepperoni? Y or N
-extra_cheese = input() # Do you want extra cheese? Y or N
+# print("Thank you for choosing Python Pizza Deliveries!")
+# size = input() # What size pizza do you want? S, M, or L
+# add_pepperoni = input() # Do you want pepperoni? Y or N
+# extra_cheese = input() # Do you want extra cheese? Y or N
+# # 🚨 Don't change the code above 👆
+# # Write your code below this line 👇
+# bill = 0
+
+# if size == 'S':
+#     bill = 15
+# elif size == 'M':
+#     bill = 20
+# else:
+#     bill += 25
+
+
+# if add_pepperoni == 'Y':
+#     if size == 'S':
+#         bill += 2
+#     else:
+#         bill += 3
+# if extra_cheese == 'Y':
+#     bill += 1
+
+# print(f'Your bill is ${bill}')
+
+
+# Logical Operators
+# And  / Or / Not
+# a = 12
+# a > 15
+# False
+# a > 10 
+# True
+# a > 10 and a < 13
+# True
+# a > 15 and a <13
+# False
+
+
+# # Adding additional elif conditions
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
+# bill = 0
+
+# if height >= 120:
+#     print('You can ride the rollercoaster!')
+#     age = int(input('What is your age?'))
+#     if age < 12:
+#         bill = 5
+#         print('Child tickets are $5.')
+#     elif age <= 18:
+#         bill = 7
+#         print('Youth tickets are $7')
+#     elif age >= 45 and age 55:
+#         print('Everything is going to be ok. Have a free ride on us!')
+#     else:
+#         bill = 12
+#         print('Adult tickets are $12.')
+        
+#     wants_photo = input('Do upi want a photo taken? Y or N.')
+#     if wants_photo == 'Y':
+#         #Add $3 to their bill
+#         bill += 3
+
+#     print(f'Your final bill is {bill}')
+
+# else:
+#     print('Sorry you have to grow taller before you can ride.')
+
+
+
+
+# Lesson 5
+# 💪 This is a difficult challenge! 💪
+# You are going to write a program that tests the compatibility between two people.
+# To work out the love score between two people:
+# Take both people's names and check for the number of times the letters in the word TRUE occurs.
+# Then check for the number of times the letters in the word LOVE occurs.
+# Then combine these numbers to make a 2 digit number.
+# For Love Scores less than 10 or greater than 90, the message should be:
+# "Your score is *x*, you go together like coke and mentos."
+# For Love Scores between 40 and 50, the message should be:
+# "Your score is *y*, you are alright together."
+# Otherwise, the message will just be their score. e.g.:
+# "Your score is *z*."
+# e.g.
+# name1 = "Angela Yu"
+# name2 = "Jack Bauer"
+# T occurs 0 times
+# R occurs 1 time
+# U occurs 2 times
+# E occurs 2 times
+# Total = 5
+# L occurs 1 time
+# O occurs 0 times
+# V occurs 0 times
+# E occurs 2 times
+# Total = 3
+# Love Score = 53
+# Print: "Your score is 53."
+
+
+print("The Love Calculator is calculating your score...")
+name1 = input() # What is your name?
+name2 = input() # What is their name?
 # 🚨 Don't change the code above 👆
 # Write your code below this line 👇
-bill = 0
+combined_names = name1 + name2
+lower_names = combined_names.lower()
+t = lower_names.count('t')
+r = lower_names.count('r')
+u = lower_names.count('u')
+e = lower_names.count('e')
+first_digit = t + r + u +e
 
-if size == 'S':
-    bill = 15
-elif size == 'M':
-    bill = 20
+l = lower_names.count('l')
+o = lower_names.count('o')
+v = lower_names.count('v')
+e = lower_names.count('e')
+second_digit = l + o + v + e
+
+score = int(str(first_digit) + str(second_digit))
+if (score < 10) or (score > 90):
+    print(f'Your score is {score}, you go together like coke and mentos.')
+elif (score >=40) and (score <=50):
+    print(f'Your score is {score}, you are alright together.')
 else:
-    bill += 25
-
-
-if add_pepperoni == 'Y':
-    if size == 'S':
-        bill += 2
-    else:
-        bill += 3
-if extra_cheese == 'Y':
-    bill += 1
-
-print(f'Your bill is ${bill}')
-
+    print(f'Your Score os {score}.')
 
 
 
